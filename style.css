@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .head {
     text-align: center;
     margin: 0;
@@ -26,6 +32,11 @@
     flex-direction: column;
 }
 
+.sketchToggle {
+    min-width: 100%;
+    text-align: left;
+    padding: 0.50em;
+}
 
 .board {
     display: grid;
@@ -44,7 +55,10 @@
     padding: 0.25rem;
 }
 
-button {
+.btnBlack,
+.btnRand,
+.btnReset,
+.btnErase {
     font-size: 1rem;
     font-family: monospace;
     font-weight: bolder;
@@ -55,7 +69,10 @@ button {
     transition: transform 0.25s;
 }
 
-button:hover {
+.btnBlack:hover,
+.btnRand:hover,
+.btnReset:hover,
+.btnErase:hover {
     border: 1px solid yellow;
     transform: scale(1.15);
 }

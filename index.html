@@ -17,13 +17,20 @@
     </header>
     <main class="container">
         <section class="content">
+            <code class="sketchToggle">Sketch Mode: Off</code>
             <div class="board"></div>
 
             <div class="buttons">
-                <button class="btnBlack">Black</button>
-                <button class="btnRand">Random</button>
-                <button class="btnErase">Erase</button>
-                <button class="btnReset">Reset</button>
+                <button class="btn btnBlack" onclick="getButtonColor('black')">Black</button>
+                <button class="btn btnRand" onclick="getButtonColor('random')">Random</button>
+                <button class="btn btnErase" onclick="getButtonColor('blue')">Erase</button>
+                <button class="btn btnReset" onclick="resetBoard()">Reset</button>
+            </div>
+            <div class="boardSize">
+                Board Size:
+                <input id="inputSize" type="number" min="2"
+                    onkeyup="if(this.value <0 || this.value > 100) value = 16, alert(`Value should only be 1 - 100`)"
+                    max="100" value="16" onchange="changeSize(this.value)">
             </div>
         </section>
     </main>
